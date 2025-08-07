@@ -34,11 +34,9 @@ Gender-based attrition trends by age
 🚀 How to Use
 Download/Clone the Repository
 
-text
-git clone https://github.com/yourusername/hr-analytics-dashboard.git
 Open the Tableau Workbook
 
-Locate the .twb or .twbx file in the repository.
+Locate the .twbx file in the repository.
 
 Double-click or open through Tableau Desktop.
 
