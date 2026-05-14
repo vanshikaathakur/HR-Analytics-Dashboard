@@ -1,85 +1,44 @@
-HR Analytics Dashboard
-A comprehensive HR Analytics Dashboard built using Tableau, designed to provide actionable insights into employee attrition, demographic distribution, job satisfaction, and more. This dashboard empowers HR professionals and business leaders to make data-driven decisions regarding workforce management.
+# 📊 End-to-End HR Analytics & Attrition Power-BI/Tableau Project
 
-📊 Dashboard Overview
-This dashboard allows users to analyze and interact with the following HR metrics:
+## 📌 Project Executive Summary
+This project addresses a critical business challenge: **Employee Attrition**. By combining Python's computational power for data engineering with Tableau’s visual storytelling, I transformed a raw dataset of 39 parameters into a strategic tool for HR decision-making. 
 
-Attrition Analysis: Track and analyze employee attrition count, attrition rate, and active employee numbers.
+The analysis identifies high-risk departments, evaluates the financial impact of turnover, and correlates workplace environment factors with employee retention.
 
-Demographics: Explore employee distribution by age groups and gender.
+---
 
-Department-wise Attrition: Visualize attrition rates across different departments.
+## 🛠️ The Technical Workflow
 
-Education Field-wise Attrition: Identify patterns in attrition based on employees' educational backgrounds.
+### 1. Data Engineering & EDA (Jupyter Notebook)
+Before any visualization, the data underwent a rigorous audit in a Python environment to ensure "Single Version of Truth" (SVOT).
+*   **Integrity Audit:** Verified that the dataset had zero missing values across all 1,470+ rows and 39 columns.
+*   **Feature Engineering:** 
+    *   Developed custom logic for `CF_age band` to group employees into demographic clusters.
+    *   Standardized the `Attrition` column into a binary label (`CF_attrition label`) for cleaner aggregation.
+*   **Exploratory Data Analysis (EDA):** 
+    *   Used **Seaborn** and **Matplotlib** to identify initial correlations between `Monthly Income` and `Attrition`.
+    *   Discovered that `Overtime` was a leading indicator of churn, which guided the dashboard's design focus.
 
-Job Satisfaction: Examine how job satisfaction varies across job roles.
+### 2. Dashboard Architecture (Tableau/Power BI)
+The cleaned data was exported to a `.csv` format and imported into the visualization tool to build an interactive ecosystem.
+*   **KPI Tracking:** Created dynamic cards for **Attrition Rate**, **Active Employee Count**, and **Average Age**.
+*   **Visual Logic:** 
+    *   **Donut Charts:** Used for Department-wise distribution to provide a quick "share of total" view.
+    *   **Histograms:** Implemented for Age Band analysis to visualize the "Attrition Peak" in younger demographics.
+    *   **Cross-tab Matrix:** Designed to map Job Satisfaction vs. Job Roles, highlighting specific "Red Zones" within the organization.
 
-Attrition Rate by Gender & Age: Dive deep into how attrition correlates with age and gender.
+---
 
-🖥️ Dashboard Features
-Interactive Filters: Filter data by education level and gender for customized views.
-
-KPI Indicators: Key performance indicators for quick insights (attrition count, rate, headcount, active employees, average age).
-
-Visualizations:
-
-Pie chart for department-wise attrition
-
-Bar and histogram charts for demographic distribution and education field analysis
-
-Cross-tab for job satisfaction ratings
-
-Gender-based attrition trends by age
-
-🚀 How to Use
-Download/Clone the Repository
-
-Open the Tableau Workbook
-
-Locate the .twbx file in the repository.
-
-Double-click or open through Tableau Desktop.
-
-Explore the Dashboard
-
-Use filters (e.g., Education, Gender) at the top to customize your view.
-
-Hover on charts and graphs for more detailed tooltips and insights.
-
-📂 File Structure
-text
-|-- hr-analytics-dashboard/
+## 📂 Project Repository Structure
+```text
+|-- hr-analytics-solution/
+    |-- notebooks/
+        |-- Untitled17.ipynb          # Full Python source code for Cleaning & EDA
     |-- data/
-        |-- [Your HR Dataset].csv  # (If available)
-    |-- hr_analytics_dashboard.twbx
+        |-- HR_Data_Raw.xlsx          # Original source file
+        |-- HR_Cleaned_Final.csv      # Processed data ready for Dashboarding
+    |-- dashboard/
+        |-- HR_Analytics_Final.twbx   # Interactive Tableau Workbook
+    |-- assets/
+        |-- dashboard_preview.png     # Visual screenshot of the final UI
     |-- README.md
-    |-- screenshots/
-        |-- dashboard_preview.png  # Screenshot of the dashboard
-📷 Dashboard Preview
-![Dashboard Preview](screenshots/dashboard_preview & Use Cases
-
-Understanding Attrition Trends: Identify high-risk groups and target interventions.
-
-Strategic HR Planning: Use demographic and department trends to inform recruitment, training, and retention strategies.
-
-Enhancing Employee Satisfaction: Leverage job satisfaction data to address areas of concern.
-
-⚡ Requirements
-Tableau Desktop (2020.1 or higher recommended)
-
-Sample HR data (replace with your organization's data as needed)
-
-💡 Customization
-Feel free to adapt and expand the dashboard:
-
-Add new dimensions and measures as required.
-
-Update with the latest data for real-time analysis.
-
-Integrate with Tableau Public for web sharing.
-
-📣 Feedback & Contributions
-Open to suggestions and improvements! If you find bugs or have feature requests, please open an issue or submit a pull request.
-
-
-Created in Tableau
