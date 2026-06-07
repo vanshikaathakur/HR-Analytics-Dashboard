@@ -1,4 +1,4 @@
-# 📊 End-to-End HR Analytics & Attrition Power-BI/Tableau Project
+# 📊 End-to-End HR Analytics & Attrition Tableau Project
 
 ## 📌 Project Executive Summary
 This project addresses a critical business challenge: **Employee Attrition**. By combining Python's computational power for data engineering with Tableau’s visual storytelling, I transformed a raw dataset of 39 parameters into a strategic tool for HR decision-making. 
@@ -19,7 +19,7 @@ Before any visualization, the data underwent a rigorous audit in a Python enviro
     *   Used **Seaborn** and **Matplotlib** to identify initial correlations between `Monthly Income` and `Attrition`.
     *   Discovered that `Overtime` was a leading indicator of churn, which guided the dashboard's design focus.
 
-### 2. Dashboard Architecture (Tableau/Power BI)
+### 2. Dashboard Architecture (Power BI)
 The cleaned data was exported to a `.csv` format and imported into the visualization tool to build an interactive ecosystem.
 *   **KPI Tracking:** Created dynamic cards for **Attrition Rate**, **Active Employee Count**, and **Average Age**.
 *   **Visual Logic:** 
